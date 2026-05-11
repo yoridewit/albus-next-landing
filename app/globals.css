@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Primary colors */
+  --color-primary: #1e2cd8;
+  --color-primary-container: #3e4cef;
+  --color-on-primary: #ffffff;
+
+  /* Secondary colors */
+  --color-secondary: #625691;
+  --color-secondary-container: #cabafe;
+  --color-on-secondary: #ffffff;
+
+  /* Surface colors */
+  --color-surface: #fbf8ff;
+  --color-surface-dim: #d4d8f9;
+  --color-surface-container: #ececff;
+  --color-surface-container-low: #f3f2ff;
+  --color-surface-container-high: #e5e7ff;
+  --color-surface-container-highest: #dde1ff;
+
+  /* Text colors */
+  --color-on-surface: #151a32;
+  --color-on-surface-variant: #454556;
+
+  /* Inverse (dark sections) */
+  --color-inverse-surface: #2a2f48;
+  --color-inverse-on-surface: #f0efff;
+
+  /* Borders */
+  --color-outline: #757687;
+  --color-outline-variant: #c5c5d8;
+
+  /* Semantic */
+  --color-error: #ba1a1a;
+  --color-background: #fbf8ff;
+
+  /* Font families */
+  --font-sans: var(--font-inter), Inter, sans-serif;
+  --font-heading: var(--font-public-sans), "Public Sans", sans-serif;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows (tinted with primary indigo at low opacity) */
+  --shadow-card: 0 4px 16px rgba(62, 76, 239, 0.08);
+  --shadow-float: 0 8px 32px rgba(62, 76, 239, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .max-w-container {
+    max-width: 1440px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background-color: #fbf8ff;
+    color: #151a32;
+  }
 }
