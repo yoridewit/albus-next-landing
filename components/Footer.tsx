@@ -1,13 +1,6 @@
-const productLinks = [
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Dashboard', href: 'https://app.albus-hc.com' },
-  { label: 'Warehouse', href: '#warehouse' },
-  { label: 'Documentatie', href: 'https://albus-hc.gitbook.io' },
-]
+const supportLinks = [{ label: 'Handleiding', href: 'https://albus-hc.gitbook.io' }]
 
-const companyLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+const socialLinks = [
   { label: 'LinkedIn', href: 'https://linkedin.com/company/albus-health' },
 ]
 
@@ -31,13 +24,15 @@ export default function Footer() {
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-inverse-on-surface/50 mb-4">
-              Product
+              Ondersteuning
             </p>
             <ul className="space-y-3">
-              {productLinks.map(({ label, href }) => (
+              {supportLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-inverse-on-surface/70 hover:text-inverse-on-surface transition-colors"
                   >
                     {label}
@@ -49,13 +44,15 @@ export default function Footer() {
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-inverse-on-surface/50 mb-4">
-              Company
+              Socials
             </p>
             <ul className="space-y-3">
-              {companyLinks.map(({ label, href }) => (
+              {socialLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-inverse-on-surface/70 hover:text-inverse-on-surface transition-colors"
                   >
                     {label}

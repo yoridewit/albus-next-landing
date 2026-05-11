@@ -16,11 +16,20 @@ export default function Hero() {
             Aanvullen.<br />
             Zoeken.
           </h1>
-          <p className="text-inverse-on-surface/70 text-lg leading-relaxed mb-10 max-w-md">
-            Albus Health digitaliseert uw OK-magazijn en logistieke processen, verhoogt de
-            efficiëntie, versnelt de hulpverlening en geeft uw medisch personeel de tijd voor wat
-            ze echt willen zijn: bij de patiënt.
+          <p className="text-inverse-on-surface/70 text-lg leading-relaxed mb-6 max-w-md">
+            Albus is een systeem waarbij je het aanvullen van de grijpvoorraad, én het klaarzetten
+            van chirurgische ingrepen gemakkelijk digitaal kunt regelen.
           </p>
+          <div className="flex flex-wrap gap-2 mb-10">
+            {['iOS', 'Android', 'PWA', 'Browser'].map((p) => (
+              <span
+                key={p}
+                className="text-xs font-semibold px-3 py-1 rounded-full border border-inverse-on-surface/20 text-inverse-on-surface/60"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
           <div className="flex flex-wrap gap-4">
             <a
               href="#contact"

@@ -9,16 +9,27 @@ export default function ContactSection() {
             <h2 className="font-heading text-4xl font-semibold text-inverse-on-surface mb-6">
               Is je interesse gewekt?
             </h2>
-            <p className="text-inverse-on-surface/70 text-lg leading-relaxed mb-6">
-              Neem contact met ons op voor een vrijblijvende demonstratie of stel uw vragen. We
-              denken graag mee over hoe Albus uw processen kan verbeteren.
+            <p className="text-inverse-on-surface/70 text-lg leading-relaxed mb-4">
+              Neem dan vrijblijvend contact op met Albus voor meer informatie of een demo.
             </p>
             <a
               href="mailto:info@albus-hc.com"
-              className="text-inverse-on-surface/60 hover:text-inverse-on-surface transition-colors text-sm"
+              className="block text-inverse-on-surface/60 hover:text-inverse-on-surface transition-colors text-sm mb-6"
             >
               info@albus-hc.com
             </a>
+            <p className="text-inverse-on-surface/60 text-sm">
+              Meer zien van Albus?{' '}
+              <a
+                href="https://albus-hc.gitbook.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-inverse-on-surface transition-colors"
+              >
+                Bekijk dan de uitgebreide handleiding
+              </a>
+              .
+            </p>
           </div>
           <ContactForm />
         </div>

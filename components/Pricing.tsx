@@ -1,11 +1,7 @@
 import { Check } from 'lucide-react'
 
-const features = [
-  'Onbeperkte toegang',
-  'Onbeperkte gebruikers',
-  'Real-time koppeling',
-  'Geen EPD-afhankelijkheid',
-]
+const monthlyFeatures = ['Volledige toegang', 'Maandelijks opzegbaar', 'Geen gebruikerslimiet']
+const annualFeatures = ['Volledige toegang', 'Twee maanden korting', 'Geen gebruikerslimiet']
 
 export default function Pricing() {
   return (
@@ -28,11 +24,10 @@ export default function Pricing() {
             </p>
             <div className="flex items-end gap-1 mb-2">
               <span className="font-heading text-5xl font-bold text-on-surface">€295</span>
-              <span className="text-on-surface-variant mb-2">/maand</span>
+              <span className="text-on-surface-variant mb-2">/maand (excl)</span>
             </div>
-            <p className="text-sm text-on-surface-variant mb-8">Maandelijks opzegbaar</p>
-            <ul className="space-y-3 mb-8">
-              {features.map((f) => (
+            <ul className="space-y-3 mb-8 mt-8">
+              {monthlyFeatures.map((f) => (
                 <li key={f} className="flex items-center gap-3">
                   <Check className="w-4 h-4 text-primary-container flex-shrink-0" />
                   <span className="text-sm text-on-surface">{f}</span>
@@ -43,7 +38,7 @@ export default function Pricing() {
               href="#contact"
               className="block text-center px-6 py-3 border border-primary-container text-primary-container font-semibold rounded-lg hover:bg-primary-container/5 transition-colors"
             >
-              Start nu
+              Klinkt goed!
             </a>
           </div>
 
@@ -57,13 +52,10 @@ export default function Pricing() {
             </p>
             <div className="flex items-end gap-1 mb-2">
               <span className="font-heading text-5xl font-bold text-on-primary">€2.950</span>
-              <span className="text-on-primary/70 mb-2">/jaar</span>
+              <span className="text-on-primary/70 mb-2">/jaar (excl)</span>
             </div>
-            <p className="text-sm text-on-primary/70 mb-8">
-              Twee maanden gratis t.o.v. maandelijks
-            </p>
-            <ul className="space-y-3 mb-8">
-              {features.map((f) => (
+            <ul className="space-y-3 mb-8 mt-8">
+              {annualFeatures.map((f) => (
                 <li key={f} className="flex items-center gap-3">
                   <Check className="w-4 h-4 text-on-primary flex-shrink-0" />
                   <span className="text-sm text-on-primary">{f}</span>
@@ -74,7 +66,7 @@ export default function Pricing() {
               href="#contact"
               className="block text-center px-6 py-3 bg-on-primary text-primary-container font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
-              Start nu
+              Klinkt goed!
             </a>
           </div>
         </div>

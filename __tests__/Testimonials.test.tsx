@@ -9,7 +9,7 @@ describe('Testimonials', () => {
 
   it('renders the first testimonial by default', () => {
     render(<Testimonials />)
-    expect(screen.getByText(/locaties van artikelen/i)).toBeInTheDocument()
+    expect(screen.getByText(/welke kast welk artikel/i)).toBeInTheDocument()
   })
 
   it('navigates to the next testimonial on arrow click', () => {
@@ -23,6 +23,6 @@ describe('Testimonials', () => {
     fireEvent.click(screen.getByLabelText('Volgende testimonial'))
     fireEvent.click(screen.getByLabelText('Volgende testimonial'))
     fireEvent.click(screen.getByLabelText('Volgende testimonial'))
-    expect(screen.getByText(/locaties van artikelen/i)).toBeInTheDocument()
+    expect(screen.getByText(/welke kast welk artikel/i)).toBeInTheDocument()
   })
 })

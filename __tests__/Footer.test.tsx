@@ -12,15 +12,13 @@ describe('Footer', () => {
     expect(screen.getByText('info@albus-hc.com')).toBeInTheDocument()
   })
 
-  it('renders product links', () => {
+  it('renders support links', () => {
     render(<Footer />)
-    expect(screen.getByText('Dashboard')).toBeInTheDocument()
-    expect(screen.getByText('Documentatie')).toBeInTheDocument()
+    expect(screen.getByText('Handleiding')).toBeInTheDocument()
   })
 
-  it('renders company links', () => {
+  it('renders social links', () => {
     render(<Footer />)
-    expect(screen.getByText('About')).toBeInTheDocument()
-    expect(screen.getByText('Contact')).toBeInTheDocument()
+    expect(screen.getByText('LinkedIn')).toBeInTheDocument()
   })
 })

@@ -1,25 +1,30 @@
-import { Archive, Smartphone, Route, Scissors } from 'lucide-react'
+import { Archive, Smartphone, Route, Scissors, Wallet } from 'lucide-react'
 
 const features = [
   {
     icon: Archive,
     title: 'Digitaliseer je magazijn met gemak',
-    body: 'Breng de volledige structuur van uw magazijn in kaart. Elimineer Excel-versies en geef iedereen via de cloud real-time toegang tot de juiste locaties en voorraden.',
+    body: 'Intuïtief design. Ontworpen voor alledaags gebruik. Synchroniseert alle veranderingen direct met alle gebruikers.',
   },
   {
     icon: Smartphone,
-    title: 'Vul je aanvullijst in. Digitaal met de App.',
-    body: 'Beschikbaar op iOS, Android en als PWA. Medewerkers scannen en vullen aan via de app — altijd gesynchroniseerd met het web dashboard.',
+    title: 'Vul je aanvul-lijst in, Digitaal met de App',
+    body: 'En laat je collega\'s gelijk weten dat je klaar bent.',
   },
   {
     icon: Route,
-    title: 'Vul sneller aan door de optimale looproute',
-    body: 'Het systeem berekent automatisch de meest efficiënte route door het magazijn. Minder stappen, minder tijd, meer gedaan.',
+    title: 'Vul sneller aan door een optimale looproute',
+    body: 'Albus zet de volgorde van de aanvrager digitaal om in een optimale looproute voor de aanvullende collega. Zo hoef je nooit meer onnodig heen en weer te lopen.',
   },
   {
     icon: Scissors,
-    title: 'Maak ingrepen aan. Zet klaar voor de app.',
-    body: 'Definieer chirurgische procedures met alle benodigde materialen. Personeel ziet exact wat ze nodig hebben, nog voor de ingreep begint.',
+    title: 'Maak ingrepen aan, Zet klaar via de app',
+    body: 'Maak gebruik van de handige looproute systematiek en het handige dashboard waar je het gehele programma kan voorbereiden en overzien.',
+  },
+  {
+    icon: Wallet,
+    title: 'Betaalbaar door slank te blijven',
+    body: "Albus staat los van EPD's, lokale ICT systemen en landelijke registratiebronnen. Hierdoor blijft de overhead laag - en de prijs dus ook.",
   },
 ]
 

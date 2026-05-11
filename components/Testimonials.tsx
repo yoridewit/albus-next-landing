@@ -6,24 +6,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const testimonials = [
   {
     quote:
-      'Het systeem toont perfect de locaties van artikelen en bespaart ons enorm veel tijd. Eindelijk weten we altijd precies waar alles ligt.',
-    name: 'S. de Vries',
+      'Handige app in gebruik. Overzichtelijk en ideaal om te zien in welke kast welk artikel ligt. Scheelt een hoop tijd en energie.',
+    name: 'Ron',
     role: 'Anesthesiemedewerker',
-    org: 'Logistiek Medewerker',
   },
   {
     quote:
-      'De schaalbaarheid, de gebruikersinterface en de geautomatiseerde functies maken dit systeem onmisbaar voor ons team. Een echte tijdsbesparing.',
-    name: 'M. Janssen',
+      'Ideale schaalbaarheid en gebruikersvriendelijke UI combineren technische meerwaarden zoals push meldingen en bijv. de automatisch op volgorde plaatsen van aangevraagde items. Prima produkt!',
+    name: 'Jeroen V.',
     role: 'Anesthesiemedewerker',
-    org: 'Verpleegkundig Specialist',
   },
   {
     quote:
-      'De geoptimaliseerde volgorde van bestellingen en de automatische notificaties hebben ons magazijnproces volledig getransformeerd.',
-    name: 'R. van den Berg',
+      'Super dat alle aanvul-lijsten nu op de goede volgorde binnenkomen. Ook krijg ik vanzelf een notificatie bij nieuwe orders - top!',
+    name: 'Nico',
     role: 'Magazijnbeheerder',
-    org: 'OK Coördinator',
   },
 ]
 
@@ -33,7 +30,7 @@ export default function Testimonials() {
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)
   const next = () => setCurrent((c) => (c + 1) % testimonials.length)
 
-  const { quote, name, role, org } = testimonials[current]
+  const { quote, name, role } = testimonials[current]
 
   return (
     <section className="py-24 bg-surface-container-low">
@@ -64,9 +61,7 @@ export default function Testimonials() {
           <p className="text-on-surface text-xl leading-relaxed mb-8 italic">"{quote}"</p>
           <div>
             <p className="font-semibold text-on-surface">{name}</p>
-            <p className="text-on-surface-variant text-sm">
-              {role} — {org}
-            </p>
+            <p className="text-on-surface-variant text-sm">{role}</p>
           </div>
         </div>
 
