@@ -34,6 +34,7 @@ export async function POST(req: NextRequest) {
   })
 
   if (error) {
+    console.error('Resend error:', JSON.stringify(error))
     return NextResponse.json({ error: 'E-mail versturen mislukt' }, { status: 500 })
   }
 
