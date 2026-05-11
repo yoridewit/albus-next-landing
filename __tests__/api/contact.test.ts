@@ -34,6 +34,11 @@ describe('POST /api/contact', () => {
     expect(res.status).toBe(400)
   })
 
+  it('returns 400 when email format is invalid', async () => {
+    const res = await POST(makeRequest({ naam: 'Test', email: 'notanemail', organisatie: 'Test' }))
+    expect(res.status).toBe(400)
+  })
+
   it('returns 200 with all valid fields', async () => {
     const res = await POST(
       makeRequest({ naam: 'Test', email: 'test@test.com', organisatie: 'Ziekenhuis' })

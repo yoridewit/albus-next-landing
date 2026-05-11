@@ -3,6 +3,12 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function esc(s: string) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json()
   const { naam, email, organisatie } = body
@@ -11,15 +17,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Alle velden zijn verplicht' }, { status: 400 })
   }
 
+  if (!EMAIL_REGEX.test(email)) {
+    return NextResponse.json({ error: 'Ongeldig e-mailadres' }, { status: 400 })
+  }
+
   const { error } = await resend.emails.send({
     from: 'Albus Health Website <noreply@albus-hc.com>',
     to: 'info@albus-hc.com',
-    subject: `Nieuwe demo aanvraag van ${naam}`,
+    subject: `Nieuwe demo aanvraag van ${esc(naam)}`,
     html: `
       <h2>Nieuwe demo aanvraag</h2>
-      <p><strong>Naam:</strong> ${naam}</p>
-      <p><strong>E-mail:</strong> ${email}</p>
-      <p><strong>Organisatie:</strong> ${organisatie}</p>
+      <p><strong>Naam:</strong> ${esc(naam)}</p>
+      <p><strong>E-mail:</strong> ${esc(email)}</p>
+      <p><strong>Organisatie:</strong> ${esc(organisatie)}</p>
     `,
   })
 
