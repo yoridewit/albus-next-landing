@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-container mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 font-heading font-bold text-xl text-on-surface tracking-tight">
           <Image src="/logo.png" alt="Albus logo" width={28} height={28} className="object-contain" />
-          Albus<span className="text-primary-container">Next</span>
+          {'Albus'}<span className="text-primary-container/75">Next</span>
         </a>
 
         <a
