@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-inverse-surface">
       <div className="max-w-container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="font-heading text-4xl font-semibold text-inverse-on-surface mb-6">
               Is je interesse gewekt?
