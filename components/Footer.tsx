@@ -1,14 +1,10 @@
-const supportLinks = [{ label: 'Handleiding', href: 'https://albus-hc.gitbook.io' }]
-
-const socialLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/albus-health' },
-]
+const socialLinks = [{ label: 'LinkedIn', href: 'https://linkedin.com/company/albus-health' }]
 
 export default function Footer() {
   return (
     <footer className="bg-inverse-surface text-inverse-on-surface py-16">
       <div className="max-w-container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div>
             <p className="font-heading font-bold text-xl mb-3">Albus Health</p>
             <p className="text-inverse-on-surface/60 text-sm leading-relaxed max-w-xs">
@@ -20,26 +16,6 @@ export default function Footer() {
             >
               info@albus-hc.com
             </a>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-inverse-on-surface/50 mb-4">
-              Ondersteuning
-            </p>
-            <ul className="space-y-3">
-              {supportLinks.map(({ label, href }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-inverse-on-surface/70 hover:text-inverse-on-surface transition-colors"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>

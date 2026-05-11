@@ -14,13 +14,16 @@ describe('Hero', () => {
     expect(screen.getByText('Vraag een demo aan')).toBeInTheDocument()
   })
 
-  it('renders the secondary CTA', () => {
+  it('renders platform badges', () => {
     render(<Hero />)
-    expect(screen.getByText('Bekijk documentatie')).toBeInTheDocument()
+    expect(screen.getByText('Web')).toBeInTheDocument()
+    expect(screen.getByText('PWA')).toBeInTheDocument()
   })
 
-  it('renders the social proof badge', () => {
+  it('renders the YouTube embed', () => {
     render(<Hero />)
-    expect(screen.getByText(/145/)).toBeInTheDocument()
+    const iframe = document.querySelector('iframe')
+    expect(iframe).toBeInTheDocument()
+    expect(iframe?.src).toContain('youtube.com/embed')
   })
 })

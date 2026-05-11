@@ -21,7 +21,7 @@ export default function Hero() {
             van chirurgische ingrepen gemakkelijk digitaal kunt regelen.
           </p>
           <div className="flex flex-wrap gap-2 mb-10">
-            {['iOS', 'Android', 'PWA', 'Browser'].map((p) => (
+            {['Web', 'PWA'].map((p) => (
               <span
                 key={p}
                 className="text-xs font-semibold px-3 py-1 rounded-full border border-inverse-on-surface/20 text-inverse-on-surface/60"
@@ -37,24 +37,17 @@ export default function Hero() {
             >
               Vraag een demo aan
             </a>
-            <a
-              href="https://albus-hc.gitbook.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-inverse-on-surface/30 text-inverse-on-surface font-semibold rounded-lg hover:bg-inverse-on-surface/10 transition-colors"
-            >
-              Bekijk documentatie
-            </a>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-lg bg-surface/10 border border-inverse-on-surface/20 p-6 shadow-float aspect-video flex items-center justify-center">
-            <span className="text-inverse-on-surface/30 text-sm">Dashboard preview</span>
-          </div>
-          <div className="absolute -top-4 -right-4 bg-primary-container text-on-primary px-4 py-2 rounded-full text-sm font-semibold shadow-float">
-            +145 Afdelingen
-          </div>
+        <div className="relative rounded-lg overflow-hidden shadow-float aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/XzFLXxX0__s?autoplay=1&mute=1&loop=1&playlist=XzFLXxX0__s"
+            title="Albus in actie"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
         </div>
       </div>
     </section>

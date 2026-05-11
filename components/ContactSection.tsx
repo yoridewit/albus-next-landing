@@ -14,22 +14,10 @@ export default function ContactSection() {
             </p>
             <a
               href="mailto:info@albus-hc.com"
-              className="block text-inverse-on-surface/60 hover:text-inverse-on-surface transition-colors text-sm mb-6"
+              className="block text-inverse-on-surface/60 hover:text-inverse-on-surface transition-colors text-sm"
             >
               info@albus-hc.com
             </a>
-            <p className="text-inverse-on-surface/60 text-sm">
-              Meer zien van Albus?{' '}
-              <a
-                href="https://albus-hc.gitbook.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-inverse-on-surface transition-colors"
-              >
-                Bekijk dan de uitgebreide handleiding
-              </a>
-              .
-            </p>
           </div>
           <ContactForm />
         </div>

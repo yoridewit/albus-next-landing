@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Testimonials from '@/components/Testimonials'
 
 describe('Testimonials', () => {
@@ -7,22 +7,17 @@ describe('Testimonials', () => {
     expect(screen.getByText('Wat Gebruikers Zeggen')).toBeInTheDocument()
   })
 
-  it('renders the first testimonial by default', () => {
+  it('renders all three testimonials at once', () => {
     render(<Testimonials />)
     expect(screen.getByText(/welke kast welk artikel/i)).toBeInTheDocument()
-  })
-
-  it('navigates to the next testimonial on arrow click', () => {
-    render(<Testimonials />)
-    fireEvent.click(screen.getByLabelText('Volgende testimonial'))
     expect(screen.getByText(/schaalbaarheid/i)).toBeInTheDocument()
+    expect(screen.getByText(/aanvul-lijsten/i)).toBeInTheDocument()
   })
 
-  it('wraps back to first testimonial from last', () => {
+  it('renders all reviewer names', () => {
     render(<Testimonials />)
-    fireEvent.click(screen.getByLabelText('Volgende testimonial'))
-    fireEvent.click(screen.getByLabelText('Volgende testimonial'))
-    fireEvent.click(screen.getByLabelText('Volgende testimonial'))
-    expect(screen.getByText(/welke kast welk artikel/i)).toBeInTheDocument()
+    expect(screen.getByText('Ron')).toBeInTheDocument()
+    expect(screen.getByText('Jeroen V.')).toBeInTheDocument()
+    expect(screen.getByText('Nico')).toBeInTheDocument()
   })
 })

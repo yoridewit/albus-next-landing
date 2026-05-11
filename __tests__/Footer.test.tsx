@@ -12,11 +12,6 @@ describe('Footer', () => {
     expect(screen.getByText('info@albus-hc.com')).toBeInTheDocument()
   })
 
-  it('renders support links', () => {
-    render(<Footer />)
-    expect(screen.getByText('Handleiding')).toBeInTheDocument()
-  })
-
   it('renders social links', () => {
     render(<Footer />)
     expect(screen.getByText('LinkedIn')).toBeInTheDocument()
