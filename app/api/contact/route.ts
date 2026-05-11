@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 function esc(s: string) {
@@ -20,6 +18,8 @@ export async function POST(req: NextRequest) {
   if (!EMAIL_REGEX.test(email)) {
     return NextResponse.json({ error: 'Ongeldig e-mailadres' }, { status: 400 })
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
   const { error } = await resend.emails.send({
     from: 'Albus Health Website <noreply@albus-hc.com>',
