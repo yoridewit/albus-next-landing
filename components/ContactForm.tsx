@@ -8,6 +8,7 @@ export default function ContactForm() {
   const [naam, setNaam] = useState('')
   const [email, setEmail] = useState('')
   const [organisatie, setOrganisatie] = useState('')
+  const [bericht, setBericht] = useState('')
   const [status, setStatus] = useState<Status>('idle')
 
   async function handleSubmit(e: FormEvent) {
@@ -17,13 +18,14 @@ export default function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ naam, email, organisatie }),
+        body: JSON.stringify({ naam, email, organisatie, bericht }),
       })
       if (!res.ok) throw new Error('Request failed')
       setStatus('success')
       setNaam('')
       setEmail('')
       setOrganisatie('')
+      setBericht('')
     } catch {
       setStatus('error')
     }
@@ -65,6 +67,13 @@ export default function ContactForm() {
         onChange={(e) => setOrganisatie(e.target.value)}
         required
         className={inputClass}
+      />
+      <textarea
+        placeholder="Uw bericht (optioneel)"
+        value={bericht}
+        onChange={(e) => setBericht(e.target.value)}
+        rows={4}
+        className={`${inputClass} resize-none`}
       />
       {status === 'error' && (
         <p className="text-error text-sm">Er is iets misgegaan. Probeer het opnieuw.</p>

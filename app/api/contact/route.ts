@@ -9,7 +9,7 @@ function esc(s: string) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-  const { naam, email, organisatie } = body
+  const { naam, email, organisatie, bericht } = body
 
   if (!naam || !email || !organisatie) {
     return NextResponse.json({ error: 'Alle velden zijn verplicht' }, { status: 400 })
@@ -30,6 +30,7 @@ export async function POST(req: NextRequest) {
       <p><strong>Naam:</strong> ${esc(naam)}</p>
       <p><strong>E-mail:</strong> ${esc(email)}</p>
       <p><strong>Organisatie:</strong> ${esc(organisatie)}</p>
+      ${bericht ? `<p><strong>Bericht:</strong> ${esc(bericht)}</p>` : ''}
     `,
   })
 
