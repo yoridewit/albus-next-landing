@@ -18,6 +18,7 @@
   --color-surface-container-low: #f3f2ff;
   --color-surface-container-high: #e5e7ff;
   --color-surface-container-highest: #dde1ff;
+  --color-surface-container-lowest: #ffffff;
 
   /* Text colors */
   --color-on-surface: #151a32;
