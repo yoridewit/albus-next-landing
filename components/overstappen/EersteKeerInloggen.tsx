@@ -1,4 +1,5 @@
 import { Download, Apple, Smartphone } from 'lucide-react'
+import CtaButton from '@/components/overstappen/CtaButton'
 
 const PDF_PATH = '/Albus Next — Installatiegids.pdf'
 
@@ -23,14 +24,15 @@ const androidStappen = [
 
 export default function EersteKeerInloggen() {
   return (
-    <section className="py-24 bg-surface">
+    <section id="eerste-keer-inloggen" className="py-24 bg-surface scroll-mt-8">
       <div className="max-w-container mx-auto px-6 max-w-3xl">
         <h2 className="font-heading text-4xl font-semibold text-on-surface mb-4 text-center">
           Zo log je de eerste keer in
         </h2>
         <p className="text-on-surface-variant text-lg text-center mb-12">
-          Albus Next heeft een eigen inlogsysteem. Je account is al aangemaakt op basis van je
-          bestaande e-mailadres — je hoeft geen nieuw account te maken.
+          Albus Next heeft een eigen inlogsysteem. Je bestaande wachtwoord werkt hier nog niet —
+          je account is al aangemaakt op basis van je bestaande e-mailadres. Stel eerst eenmalig
+          een nieuw wachtwoord in, daarna kun je inloggen. Je hoeft geen nieuw account te maken.
         </p>
 
         <ol className="space-y-4 mb-12">
@@ -43,6 +45,13 @@ export default function EersteKeerInloggen() {
             </li>
           ))}
         </ol>
+
+        <div className="text-center mb-16">
+          <CtaButton />
+          <p className="text-on-surface-variant text-sm mt-3">
+            Opent Albus Next — kies daar &quot;Wachtwoord vergeten&quot; om te beginnen.
+          </p>
+        </div>
 
         <h3 className="font-heading text-2xl font-semibold text-on-surface mb-2 text-center">
           Zet Albus op je beginscherm (optioneel)
