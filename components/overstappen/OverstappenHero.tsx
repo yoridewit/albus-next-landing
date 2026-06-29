@@ -21,7 +21,7 @@ export default function OverstappenHero() {
           Na de zomer stappen we over van de app naar Albus Next — de nieuwe webapp. De
           testomgeving staat al klaar. Test nu alvast en wen aan de nieuwe Albus.
         </p>
-        <CtaButton variant="inverse" />
+        <CtaButton variant="inverse" href="#eerste-keer-inloggen" />
       </div>
     </section>
   )

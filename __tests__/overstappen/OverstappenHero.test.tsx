@@ -12,8 +12,8 @@ describe('OverstappenHero', () => {
     expect(screen.getByText(/na de zomer/i)).toBeInTheDocument()
   })
 
-  it('renders the primary CTA', () => {
+  it('renders the primary CTA that scrolls to the login section', () => {
     render(<OverstappenHero />)
-    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute('href', 'https://www.albusnext.nl')
+    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute('href', '#eerste-keer-inloggen')
   })
 })

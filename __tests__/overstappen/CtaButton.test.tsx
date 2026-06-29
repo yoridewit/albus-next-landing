@@ -12,4 +12,12 @@ describe('CtaButton', () => {
     render(<CtaButton label="Ga naar Albus Next" />)
     expect(screen.getByRole('link', { name: 'Ga naar Albus Next' })).toBeInTheDocument()
   })
+
+  it('accepts a custom href (e.g. an in-page anchor)', () => {
+    render(<CtaButton href="#eerste-keer-inloggen" />)
+    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute(
+      'href',
+      '#eerste-keer-inloggen',
+    )
+  })
 })
