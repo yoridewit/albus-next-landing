@@ -1,4 +1,4 @@
-import { Boxes, Zap, Brain } from 'lucide-react'
+import { Boxes, Zap, Search } from 'lucide-react'
 
 const features = [
   {
@@ -12,9 +12,9 @@ const features = [
     body: 'Een opnieuw opgebouwde interface die sneller en overzichtelijker werkt op elk scherm.',
   },
   {
-    icon: Brain,
-    title: 'Slimme voorraadhulp',
-    body: 'AI-ondersteunde suggesties helpen je sneller de juiste artikelen en aanvullingen te vinden.',
+    icon: Search,
+    title: 'Slim zoeken',
+    body: 'Je vindt artikelen ook als je de naam niet helemaal goed typt of je niet meer precies herinnert hoe iets heet.',
   },
 ]
 
