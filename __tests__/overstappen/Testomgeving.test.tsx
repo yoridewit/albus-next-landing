@@ -4,16 +4,16 @@ import Testomgeving from '@/components/overstappen/Testomgeving'
 describe('Testomgeving', () => {
   it('renders the heading', () => {
     render(<Testomgeving />)
-    expect(screen.getByRole('heading', { name: /testomgeving staat klaar/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /nu vast verkennen/i })).toBeInTheDocument()
   })
 
-  it('mentions recent (not latest) data', () => {
+  it('mentions the data may be outdated', () => {
     render(<Testomgeving />)
-    expect(screen.getByText(/recente data/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/verouderd/i).length).toBeGreaterThan(0)
   })
 
-  it('renders the disclaimer about resetting data', () => {
+  it('renders the disclaimer against casually changing or moving data', () => {
     render(<Testomgeving />)
-    expect(screen.getByText(/kan gereset worden/i)).toBeInTheDocument()
+    expect(screen.getByText(/wijzig of verplaats niet zomaar iets/i)).toBeInTheDocument()
   })
 })

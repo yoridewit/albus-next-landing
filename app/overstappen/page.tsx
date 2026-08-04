@@ -9,9 +9,9 @@ import FeedbackContact from '@/components/overstappen/FeedbackContact'
 import AfsluitendeCta from '@/components/overstappen/AfsluitendeCta'
 
 export const metadata: Metadata = {
-  title: 'Albus Next komt eraan — test nu alvast',
+  title: 'Albus Next komt eraan — vast alvast verkennen',
   description:
-    'Na de zomer stappen we over naar Albus Next. De testomgeving staat klaar. Ontdek de voordelen, nieuwe features en hoe je de eerste keer inlogt.',
+    'Na de zomer stappen we over naar Albus Next. Je kunt er nu al in kijken. Ontdek de voordelen, nieuwe features en hoe je de eerste keer inlogt.',
   robots: { index: false, follow: false },
 }
 

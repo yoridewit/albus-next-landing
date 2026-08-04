@@ -9,6 +9,6 @@ describe('AfsluitendeCta', () => {
 
   it('renders the CTA linking to albusnext.nl', () => {
     render(<AfsluitendeCta />)
-    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute('href', 'https://www.albusnext.nl')
+    expect(screen.getByRole('link', { name: 'Verken Albus Next' })).toHaveAttribute('href', 'https://www.albusnext.nl')
   })
 })

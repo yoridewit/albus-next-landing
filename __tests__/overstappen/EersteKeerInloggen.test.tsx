@@ -20,7 +20,7 @@ describe('EersteKeerInloggen', () => {
 
   it('renders the CTA to albusnext.nl after the login steps', () => {
     render(<EersteKeerInloggen />)
-    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Verken Albus Next' })).toHaveAttribute(
       'href',
       'https://www.albusnext.nl',
     )
