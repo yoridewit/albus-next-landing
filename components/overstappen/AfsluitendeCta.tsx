@@ -15,7 +15,7 @@ export default function AfsluitendeCta() {
           Klaar om te beginnen?
         </h2>
         <p className="text-inverse-on-surface/70 text-lg mb-10 max-w-xl mx-auto">
-          Test Albus Next nu alvast, zodat je er straks helemaal klaar voor bent.
+          Bekijk Albus Next nu vast, zodat je er straks helemaal klaar voor bent.
         </p>
         <CtaButton variant="inverse" />
       </div>

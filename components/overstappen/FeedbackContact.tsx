@@ -13,9 +13,8 @@ export default function FeedbackContact() {
           Laat ons weten wat je vindt
         </h2>
         <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-          Loop je tegen iets aan tijdens het testen, of heb je een idee? Je feedback helpt ons
-          Albus Next beter te maken vóór de overstap. Neem contact op met je Albus-beheer of mail
-          ons rechtstreeks.
+          Loop je tegen iets aan, of heb je een idee? Je feedback helpt ons Albus Next beter te
+          maken vóór de overstap. Neem contact op met je Albus-beheer of mail ons rechtstreeks.
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}`}

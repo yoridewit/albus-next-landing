@@ -14,6 +14,6 @@ describe('OverstappenHero', () => {
 
   it('renders the primary CTA that scrolls to the login section', () => {
     render(<OverstappenHero />)
-    expect(screen.getByRole('link', { name: 'Start met testen' })).toHaveAttribute('href', '#eerste-keer-inloggen')
+    expect(screen.getByRole('link', { name: 'Verken Albus Next' })).toHaveAttribute('href', '#eerste-keer-inloggen')
   })
 })

@@ -12,7 +12,7 @@ describe('Overstappen page', () => {
     render(<OverstappenPage />)
     expect(screen.getByRole('heading', { name: /Waarom Albus Next/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Nieuw in Albus Next/i })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /testomgeving staat klaar/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /nu vast verkennen/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Wat blijft hetzelfde/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Zo log je de eerste keer in/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Laat ons weten wat je vindt/i })).toBeInTheDocument()

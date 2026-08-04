@@ -18,8 +18,8 @@ export default function OverstappenHero() {
           Albus Next komt eraan
         </h1>
         <p className="text-inverse-on-surface/70 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-          Na de zomer stappen we over van de app naar Albus Next — de nieuwe webapp. De
-          testomgeving staat al klaar. Test nu alvast en wen aan de nieuwe Albus.
+          Na de zomer stappen we over van de app naar Albus Next — de nieuwe webapp. Je kunt
+          er nu vast in kijken en wennen aan de nieuwe Albus.
         </p>
         <CtaButton variant="inverse" href="#eerste-keer-inloggen" />
       </div>

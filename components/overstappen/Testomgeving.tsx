@@ -1,4 +1,4 @@
-import { FlaskConical, TriangleAlert } from 'lucide-react'
+import { Compass, TriangleAlert } from 'lucide-react'
 
 export default function Testomgeving() {
   return (
@@ -6,15 +6,15 @@ export default function Testomgeving() {
       <div className="max-w-container mx-auto px-6 max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 bg-primary-container/10 rounded-md flex items-center justify-center">
-            <FlaskConical className="w-6 h-6 text-primary-container" />
+            <Compass className="w-6 h-6 text-primary-container" />
           </div>
           <h2 className="font-heading text-4xl font-semibold text-on-surface">
-            De testomgeving staat klaar
+            Je kunt nu vast verkennen
           </h2>
         </div>
         <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-          Je kunt Albus Next nu al verkennen. De testomgeving is gevuld met recente data
-          (mogelijk niet de allernieuwste), zodat alles vertrouwd aanvoelt terwijl je oefent.
+          Je kunt Albus Next nu al bekijken. De data die je ziet kan verouderd zijn (mogelijk
+          niet de allernieuwste), maar zo krijg je alvast een goed beeld van hoe alles werkt.
         </p>
         <div className="bg-surface-container-low border border-outline-variant/50 rounded-lg p-6 flex gap-4">
           <TriangleAlert className="w-6 h-6 text-secondary shrink-0 mt-1" />
@@ -23,9 +23,8 @@ export default function Testomgeving() {
               Goed om te weten
             </h3>
             <p className="text-on-surface-variant leading-relaxed">
-              Dit is een testomgeving om vrij te verkennen en oefenen. De data kan gereset
-              worden, dus voer hier geen echte productie-acties uit. Experimenteer gerust —
-              je kunt niets stukmaken.
+              De data kan verouderd zijn, dus wijzig of verplaats niet zomaar iets. Voer alleen
+              acties uit die je ook echt bedoelt.
             </p>
           </div>
         </div>

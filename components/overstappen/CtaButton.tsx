@@ -7,7 +7,7 @@ type CtaButtonProps = {
 export const ALBUS_NEXT_URL = 'https://www.albusnext.nl'
 
 export default function CtaButton({
-  label = 'Start met testen',
+  label = 'Verken Albus Next',
   variant = 'primary',
   href = ALBUS_NEXT_URL,
 }: CtaButtonProps) {
